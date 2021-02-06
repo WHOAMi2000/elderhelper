@@ -1,3 +1,25 @@
 <view>
-  123
+  <cu-custom bgColor="bg-gradual-blue" >
+    <view slot="content" text-bold>老年人社区服务助手</view>
+  </cu-custom>
+
+  <view class="padding flex flex-direction">
+    <button class="cu-btn round bg-gradual-blue shadow lg">我有快递</button>
+    <button class="cu-btn round bg-pink shadow margin-tb-sm lg">帮取快递</button>
+  </view>
+
+  <view class="padding-sm" >
+    <view class="bg-gradual-blue padding margin radius  text-left shadow-blur">
+      <view class="text-bold lg">你好</view>
+      <view class="margin-top-sm text-Abc">我有快递</view>
+    </view> 
+
+    <view class="bg-blue padding margin radius  text-left light shadow">
+      <view class="text-bold lg">你好</view>
+      <view class="margin-top-sm text-Abc">我有快递</view>
+    </view> 
+
+  </view>
 </view>
+
+
