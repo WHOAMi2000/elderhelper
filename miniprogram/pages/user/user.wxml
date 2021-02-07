@@ -1,0 +1,9 @@
+<scroll-view scroll-y class="scrollPage">
+  <cu-custom bgColor="bg-blue">
+    <view slot="content" text-bold>老年人社区服务助手</view>
+  </cu-custom>
+
+
+
+</scroll-view>
+

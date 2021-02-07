@@ -1,25 +1,51 @@
-<view>
-  <cu-custom bgColor="bg-gradual-blue" >
+<view class="page">
+  <cu-custom bgColor="bg-blue">
     <view slot="content" text-bold>老年人社区服务助手</view>
   </cu-custom>
 
-  <view class="padding flex flex-direction">
-    <button class="cu-btn round bg-gradual-blue shadow lg">我有快递</button>
-    <button class="cu-btn round bg-pink shadow margin-tb-sm lg">帮取快递</button>
-  </view>
+  <scroll-view scroll-y class="scrollPage">
 
-  <view class="padding-sm" >
-    <view class="bg-gradual-blue padding margin radius  text-left shadow-blur">
-      <view class="text-bold lg">你好</view>
-      <view class="margin-top-sm text-Abc">我有快递</view>
+    <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+      <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+        <view class="swiper-item">
+          <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+          <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+        </view>
+      </swiper-item>
+    </swiper>
+
+    <view class="cu-item bg-blue padding margin round  text-left shadow">
+      <image class='png' mode="aspectFit" src="/images/home.png"></image>
+      <view class="content">
+        <text class="text-xxl text-bold text-Abc">快递到家</text>
+        <view class="margin-top-sm text-Abc">我有快递</view>
+      </view>
+      <view class="action">
+        <text class='cuIcon-right'></text>
+      </view>
     </view> 
 
-    <view class="bg-blue padding margin radius  text-left light shadow">
-      <view class="text-bold lg">你好</view>
-      <view class="margin-top-sm text-Abc">我有快递</view>
+    <view class="cu-item bg-green padding margin round  text-left shadow">
+      <image class='png' mode="aspectFit" src="/images/help.png"></image>
+      <view class="content">
+        <text class="text-xxl text-bold text-Abc">帮取快递</text>
+        <view class="margin-top-sm text-Abc">帮邻居取</view>
+      </view>
+      <view class="action">
+        <text class='cuIcon-right'></text>
+      </view>
     </view> 
 
-  </view>
+    <view class="cu-item bg-cyan padding margin round text-left  shadow">
+      <image class='png' mode="aspectFit" src="/images/box.png"></image>
+      <view class="content">
+        <text class="text-xxl text-bold text-Abc">我的快递</text>
+        <view class="margin-top-sm text-Abc">历史记录</view>
+      </view>
+      <view class="action">
+        <text class='cuIcon-right'></text>
+      </view>
+    </view> 
+  </scroll-view>
 </view>
-
 

@@ -1,0 +1,27 @@
+.png{
+  width: 20%;
+  height: 80rpx;
+  margin-left: 2%;
+  margin-right: 6%;
+  margin-top: 2%;
+}
+.content{
+  width: 60%;
+}
+.cu-item{
+  display: flex;
+}
+.action{
+  font-size: 66rpx;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+.page{
+  height: 100vh;
+}
+.scrollPage{
+  height: 100%;
+}
+.card-swiper{
+  height: 30%;
+}

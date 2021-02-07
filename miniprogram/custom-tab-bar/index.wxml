@@ -1,0 +1,11 @@
+<view class="cu-bar tabbar bg-white">
+    <view class="action {{selected === 0 ? 'active' : 'default'}}" data-index="0" bindtap="switchTab">
+      <view class="cuIcon-homefill"></view>
+        首页
+    </view>
+
+    <view class="action {{selected === 1 ? 'active' : 'default'}}" data-index="1" bindtap="switchTab">
+      <view class="cuIcon-myfill"></view>
+      我的
+    </view>
+</view>
