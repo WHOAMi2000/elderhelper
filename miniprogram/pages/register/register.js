@@ -95,13 +95,12 @@ Page({
             titel: "提示",
             content: "注册成功!请登录",
             duration:3000,
-            // success(res){
-            //   wx.redirectTo({
-            //     url: '../login/login',
-            //   })
-            // }
+             success(res){
+               wx.redirectTo({
+                 url: '../login/login',
+               })
+             }
           });
-          
         }
       }
     }) 

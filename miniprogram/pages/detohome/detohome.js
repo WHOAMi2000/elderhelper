@@ -1,24 +1,106 @@
-// pages/detohome/detohome.js
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {
+  data:{
+    order_num:'',
+    scores:'',
+    address_num_rec:'',
     picker: ['普通件', '大件', '超大件'],
   },
+
   PickerChange(e) {
     console.log(e);
     this.setData({
       index: e.detail.value
+    })},
+
+  SetMydata:function() {
+
+    var that = this;
+    const db = wx.cloud.database();
+    const information = db.collection("information");
+    const detailed_infor= db.collection("detailed_infor");
+    const score = db.collection("score");
+    const order = db.collection("order");
+    var address = '';
+    var phone_num = wx.getStorageSync('phone_num');//获取用户id
+    detailed_infor.where({
+      phone_num_d : phone_num,
+
+    }).get().then(res => {
+      address = res.data[0].address_num_d;
+      that.setData(
+        {
+            order_num:phone_num,
+            address_num_rec:res.data[0].address_num_d
+        }
+      )
+      score.where({
+        address_num : address,
+  
+      }).get().then(r=> {
+        console.log(r.data[0])
+        that.setData(
+          {
+              scores:r.data[0].scores,
+          },  
+        )
+ 
+      })
+
     })
+  
+  },
+ 
+  onRegister: function(e) {
+    var page = this;
+    var condition = e.detail.value.condition;
+    var size = e.detail.value.size;
+    var that = this;
+    const db = wx.cloud.database();
+    const information = db.collection("information");
+    const detailed_infor= db.collection("detailed_infor");
+    const score = db.collection("score");
+    const order = db.collection("order");
+    var address = '';
+    var phone_num = wx.getStorageSync('phone_num');//获取用户id
+    detailed_infor.where({
+      phone_num_d : phone_num,
+
+    }).get().then(res => {
+      address = res.data[0].address_num_d;
+
+      score.where({
+        address_num : address,
+  
+      }).get().then(r=> {
+        console.log(r.data[0])
+
+        order.add({
+          order_num:phone_num,
+          address_num_rec:res.data[0].address_num_d,
+          scores:r.data[0].scores,
+          condition :condition,
+          size:size
+        })
+
+        
+ 
+      })
+    })
+     
   },
 
+
+    
+  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.SetMydata();
   },
 
   /**

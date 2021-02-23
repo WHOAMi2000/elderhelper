@@ -1,1 +1,22 @@
+.left{
+  text-align: justify;
+	padding-right: 30rpx;
+	position: relative;
+	height: 60rpx;
+	line-height: 60rpx;
+}
 
+.cu-form-group .left {
+  min-width: calc(4em + 50rpx);
+  font-size: 32rpx;
+  font-weight: 500;
+}
+.container {
+  width: 100%;
+  height: 700px;
+  background-color: white;
+}
+
+.form{
+  width: 300px;
+}

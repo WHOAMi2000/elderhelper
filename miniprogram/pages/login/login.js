@@ -28,9 +28,12 @@ Page({
         wx.setStorageSync('phone_num', res.data[0].phone_num); //将user_name存入本地缓存
         wx.showModal({
           title: "提示",
-          content: "登陆成功"
+          content: "登陆成功", 
+          duration:3000,            
         })
-  
+        wx.switchTab({
+          url: '../index/index',
+        })
       } else {
         wx.showModal({
           title: "提示",
@@ -43,7 +46,7 @@ Page({
   },
   turntoregister:function(){
     wx.redirectTo({
-      url: '../../pages/change/register',
+      url: '../../pages/register/register',
     })
   },
   onLoad: function (options) {

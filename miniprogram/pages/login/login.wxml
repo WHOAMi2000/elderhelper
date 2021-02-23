@@ -1,18 +1,35 @@
-<view class="container">
+<cu-custom bgColor="bg-blue">
+  <view slot="content" text-bold>社区服务助手</view>
+</cu-custom>
 
-  <!-- <text class="header">登录</text> -->
+<view class="cu-bar bg-white ">
+  <view class="action border-title shadow-blur">
+    <text class="text-xl text-bold text-blue">用户登录</text>
+    <text class="bg-gradual-blue" style="width:4rem"></text>
+  </view>
+</view>
+
+
+
+<view class="container">
   <view class="form">
     <form bindsubmit="onLogin">
-      <view class = "inline userid">
-        <view class = "left">用户名</view>
-        <input name="userid" class = "right"></input>
+      <view class = "cu-form-group padding margin-top userid">
+        <view class = "left">手机号码</view>
+        <input name="userid" class = "right" placeholder="请输入手机号码"></input>
       </view>
-      <view class = "inline">
+      <view class = "cu-form-group padding solid-bottom margin-bottom">
         <view class = "left">密码</view>
-        <input name="password" class = "right" password="true"></input>
+        <input name="password" class = "right" password="true" placeholder="请输入密码"></input>
       </view>
-      <button class="login" form-type="submit" hover-class="hover">登录</button>
+      <view class="cu-bar margin-top">
+        <button class="cu-btn bg-blue margin-tb-sm padding shadow-blur round lg" form-type="submit" hover-class="hover">登录</button>  
+      </view>
     </form>
-    <button class="register" hover-class="hover" bindtap="turntoregister">注册</button>
+
+    <view class="cu-bar margin-top">
+      <button class="cu-btn bg-blue padding shadow-blur light round lg" bindtap="turntoregister">注册</button>  
+    </view>
+
   </view>
 </view>

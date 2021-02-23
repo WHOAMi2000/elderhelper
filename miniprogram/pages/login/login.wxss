@@ -6,32 +6,11 @@
   background-color: white;
 }
 
-.pic{
-  width: 480px;
-  height: 260px;
-}
-.primary{
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 30px;
-}
 .form{
   width: 300px;
   /* margin:20px; */
-  font-family: 'Times New Roman', Times, serif;
 }
-.inline{
-  margin-top: 40px;
-  /* display:flex */
-  height: 15px;
-}
-.inline input{
-  margin-left: 15px;
-  border-bottom: 1px solid black;
-  font-family: 'Times New Roman', Times, serif;
-}
-.left{
-  float: left;
-}
+
 .right{
   float: right;
 }
@@ -48,6 +27,19 @@
   font-size: 20px;
   background-image: linear-gradient(to left top, royalblue, lightskyblue);}
 
-.hover {
-    background-image: linear-gradient(to left top,pink,plum);
+
+
+.left{
+  text-align: justify;
+	padding-right: 30rpx;
+	position: relative;
+	height: 60rpx;
+	line-height: 60rpx;
 }
+
+.cu-form-group .left {
+  min-width: calc(4em + 50rpx);
+  font-size: 32rpx;
+  font-weight: 500;
+}
+

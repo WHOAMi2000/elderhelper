@@ -1,42 +1,59 @@
 <cu-custom bgColor="bg-blue">
-  <view slot="content" text-bold>社区服务助手</view>
+	<view slot="content" text-bold>社区服务助手</view>
 </cu-custom>
 
-<view class="cu-bar bg-white solid-bottom">
-  <view class="action border-title">
+
+
+<view class="cu-bar bg-white">
+  <view class="action border-title shadow-blur">
     <text class="text-xl text-bold text-blue">用户注册</text>
-    <text class="bg-gradual-blue" style="width:3rem"></text>
+    <text class="bg-gradual-blue" style="width:4rem"></text>
   </view>
 </view>
 
-<form>
-  <view class="cu-form-group padding">
-		<view class="title">手机号码</view>
-		<input placeholder="请输入手机号码"></input>
-  </view>
-	<view class="cu-form-group padding">
-		<view class="title">输入密码</view>
-		<input placeholder="请输入密码"></input>
-	</view>
-	<view class="cu-form-group padding">
-		<view class="title">确认密码</view>
-		<input placeholder="请再次输入密码"></input>
-	</view>
-	<view class="cu-form-group padding">
-		<view class="title">姓名</view>
-		<input placeholder=""></input>
-  </view>
-  <view class="cu-form-group padding">
-		<view class="title">性别</view>
-		<input placeholder=""></input>
-  </view>
-  	<view class="cu-form-group padding">
-		<view class="title">年龄（岁）</view>
-		<input placeholder=""></input>
-  </view>
-</form>
 
-<view class="cu-bar margin-top">
-  <button class="cu-btn bg-blue shadow-blur radius lg">注册</button>  
+<view class="container">
+	<view class="form">
+		<form bindsubmit="onRegister">
+	<view class = "cu-form-group padding userid">
+		<view class = "left">手机号码</view>
+		<input name="phone_num" class = "right" placeholder="请输入手机号码"></input>
+	</view>
+
+	<view class = "cu-form-group padding">
+		<view class = "left">输入密码</view>
+		<input name="password1" class = "right" password="true" placeholder="请输入密码"></input>
+	</view>
+
+	<view class = "cu-form-group padding">
+		<view class = "left">确认密码</view>
+		<input name="password2" class= "right" password="true" placeholder="请再次输入密码"></input>
+	</view>
+
+	<view class = "cu-form-group padding">
+		<view class = "left">家庭号码</view>
+		<input name="address_num" class = "right" placeholder="请输入家庭号码" ></input>
+	</view>
+
+	<view class = "cu-form-group padding">
+		<view class = "left">姓名</view>
+		<input name="name" class = "right" ></input>
+	</view>
+
+	<view class = "cu-form-group padding">
+		<view class = "left">年龄</view>
+		<input name="age" class = "right" ></input>
+	</view>
+
+	<view class = "cu-form-group padding solid-bottom">
+		<view class = "left">性别</view>
+		<input name="sex" class = "right" placeholder="男/女"></input>
+	</view>
+
+	<view class="cu-bar margin-top">
+		<button class = "cu-btn bg-blue padding shadow-blur round lg margin-top" form-type="submit" hover-class="hover">注册</button>
+	</view>
+</form>
+</view>
 </view>
 
