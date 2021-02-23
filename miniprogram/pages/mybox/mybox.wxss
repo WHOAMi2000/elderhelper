@@ -1,0 +1,25 @@
+.png{
+  width: 14%;
+  height: 20%;
+  margin-right: 6%;
+}
+.content{
+  width: 96%;
+}
+
+.cu-item{
+  display: flex;
+  border-radius: 36rpx;
+}
+.action{
+  font-size: 36rpx;
+  margin-right: 2rpx;
+  
+}
+.scrollPage{
+  height: 100%;
+}
+.cuIcon-titles{
+  margin-top: 10rpx;
+}
+

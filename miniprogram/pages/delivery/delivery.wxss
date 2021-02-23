@@ -1,1 +1,22 @@
-/* pages/delivery/delivery.wxss */
+.png{
+  width: 20%;
+  height: 80rpx;
+  margin-left: 2%;
+  margin-right: 6%;
+  margin-top: 2%;
+}
+.con{
+  width: 60%;
+}
+.cu-item{
+  display: flex;
+}
+.action{
+  font-size: 66rpx;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+.scrollPage{
+  height: 100%;
+}
+

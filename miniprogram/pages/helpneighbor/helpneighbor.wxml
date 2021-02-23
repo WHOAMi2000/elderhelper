@@ -1,0 +1,5 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+  <view slot="content" text-bold>帮取快递</view>
+  <view slot="backText">返回</view>
+</cu-custom>
+

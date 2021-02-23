@@ -1,0 +1,27 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+  <view slot="content" text-bold>我的快递</view>
+  <view slot="backText">返回</view>
+</cu-custom>
+
+<view class="cu-bar bg-white shadow">
+    <view class="action">
+      <text class="cuIcon-titles text-green"></text>
+      <text class="text-xl text-bold">快递信息</text>
+    </view>
+  </view>
+
+<navigator open-type="navigate" hover-class='none' url="/pages/{{item.name}}/{{item.name}}" class="cu-item  padding margin  bg-white text-left shadow" wx:for="{{elements}}" wx:key>
+  <text class="cuIcon-titles text-green"></text>
+  <view class="content">
+  
+    <view class="text-bold text-xl text-black">{{item.title}}</view>
+    <view class="margin-top-sm text-Abc text-xl">快递取件码：{{item.code}}</view>
+    <view class="margin-top-sm text-Abc text-xl">取件地点：{{item.place}}</view>
+    <view class="margin-top-sm text-Abc text-xl">运件人：{{item.from}}</view>
+    <view class="margin-top-sm text-Abc text-xl">联系方式：{{item.from_num}}</view>
+  </view>
+  <view class="action">
+    <text class='cuIcon-right'></text>
+  </view>
+  
+</navigator>

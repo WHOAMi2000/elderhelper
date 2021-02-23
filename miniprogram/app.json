@@ -1,8 +1,14 @@
 {
   "pages": [
+    "pages/login/login",
+    "pages/mybox/mybox",
+    
+    "pages/register/register",
+    "pages/helpneighbor/helpneighbor",
     "pages/index/index",
-    "pages/delivery/delivery",
+    "pages/detohome/detohome",
     "pages/health/health",
+    "pages/delivery/delivery",
     "pages/user/user"
   ],
   "tabBar": {

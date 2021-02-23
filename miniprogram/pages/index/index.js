@@ -30,10 +30,26 @@ Page({
       type: 'image',
       url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
     }],
+    elements:[
+      {id: 0, title: '快递服务', juzi: '18817876167', color: 'blue',  name: 'delivery'},
+      {id: 1, title: '健康服务', juzi: '18817876167', color: 'green',  name: 'health'}
+
+      
+    ]
   },
   onLoad() {
     this.towerSwiper('swiperList');
     // 初始化towerSwiper 传已有的数组名即可
+  },
+  onShow: function () {
+    this.tabBar() ;
+  },
+  tabBar(){
+    if(typeof this.getTabBar === 'function' && this.getTabBar()){
+      this.getTabBar().setData({
+        selected:0
+      })
+    }
   },
   DotStyle(e) {
     this.setData({
